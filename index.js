@@ -12,13 +12,33 @@ app.get("/", (req, res)=>{
   res.render("index", {title: "Home"});
 });
 
-// app.get("/", (req, res)=>{
-//   res.render("fluidCalculator", {title: "Fluid Calculator"});
-// });
+app.get("/childOrNeonate", (req, res)=>{
+  res.render("childOrNeonate", {title: "Child Or Neonate"});
+});
 
-// app.get("/fluidCalculator", {function(res, req) 
-//   {res.render("fluidCalculator")}
-// });
+app.get("/fluidCalculator", (req, res)=>{
+  res.render("fluidCalculator", {title: "Fluid Calculator"});
+});
+
+app.get("/fluidChoice", (req, res)=>{
+  res.render("fluidChoice", {title: "Fluid Choice"});
+});
+
+app.get("/fluidBalance", (req, res)=>{
+  res.render("fluidBalance", {title: "Fluid Balance"});
+});
+
+app.get("/fluidReview", (req, res)=>{
+  res.render("fluidReview", {title: "Fluid Review"});
+});
+
+app.get("/otherAssessments", (req, res)=>{
+  res.render("otherAssessments", {title: "Other Assessments"});
+});
+
+app.get("/recordBloodSugar", (req, res)=>{
+  res.render("recordBloodSugar", {title: "Record Blood Sugar"});
+});
 
 //server activation
 app.listen(port, ()=>{
