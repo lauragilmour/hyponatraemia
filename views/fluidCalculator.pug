@@ -30,5 +30,126 @@ block layout-content
                       div.NavButtons 
                         a(href="/recordBloodSugar")
                           div.NavButton Record Blood Sugar      
-      div.Title
-        h3 Fluid Calculator
+      
+      div.BannerBlue Fluid Calculator
+      div.PageContent
+        h3 Weight
+        div.Whitespace
+        h2 Weight: 
+          input#favoriteBook.form-control(type='text', placeholder='(kg)' name='weight')
+        div.Whitespace hello   
+        select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+          option(value='0') -- Select --
+          option(value='1') Measured
+          option(value='2') Recent
+          option(value='3') Estimate
+
+        script.
+              function myclick(){ 
+              var t=$("#myselect").val().toString();
+              $("#zaftot").val(t);
+              $("#zaftot").focus();
+              $("#myselect").hide();
+            };
+      .BannerBlue 
+      div.PageContent  
+        h3 Fluid Deficit
+        div.Whitespace hello
+        h2 Is there dehydration?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') No
+            option(value='2') Mild
+            option(value='3') Moderate
+            option(value='4') Severe
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace
+        h2 Was fluid bolus required?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Yes
+            option(value='2') No
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+                div.Whitespace
+        div.Whitespace
+        h2 Amount
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') 1x10ml/kg
+            option(value='2') 2x10ml/kg
+            option(value='3') 1x20ml/kg
+            option(value='4') 2x20ml/kg
+            option(value='5') Other
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace
+        input#favoriteBook.form-control(type='text', placeholder='Other' name='comment')      
+      div.BannerBlue 
+      div.PageContent  
+        h3 Fluid Maintenace
+        div.Whitespace hello
+        h2 Oral fluids are preferred 
+        div.Whitespace hello
+        h2 Is U&E available?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Yes
+            option(value='2') No
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace hello
+        h2 Reason for IV fluids
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Intractable Vomiting
+            option(value='2') Excessive Losses
+            option(value='3') Resp Compromise
+            option(value='4') Critically Unwell
+            option(value='5') Other (Specify)
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace hello
+        div.Buttons
+          a()
+            div.Button Calculate Fluids
+        div.Whitespace hello
+        h2 24Hr Period:  
+          input#favoriteBook.form-control(type='text', placeholder='' name='24hr') 
+          h2 (ml/hr)
+          div.Whitespace hello
+          h2 48Hr Period:  
+            input#favoriteBook.form-control(type='text', placeholder='' name='48hr') 
+            h2 (ml/hr)
+      div.BannerBlue 
