@@ -33,4 +33,40 @@ block layout-content
       
       div.BannerBlue Record Blood Sugar
       div.PageContent
-        h3 hello
+        h3 Record Blood Sugar Level
+        div.Whitespace hello
+        h2 Blood Sugar Level: 
+          input(type="text", name="bloodSugarLevel")
+          div.Whitespace hello
+        h2 Clinical Comment: 
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Result Recorded 
+            option(value='2') Low Sugar -: Extra feed given
+            option(value='3') Low Sugar -: IVbous and infusion increased
+            option(value='4') Low Sugar -: Hypopack taken
+            option(value='5') High Sugar -: Insulin given
+            option(value='6') High Sugar -: Insulin commenced 
+            option(value='7') High Sugar -: Urine check
+            option(value='8') High Sugar -:Insulin infusion increased
+            option(value='9') Other (please state)
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace 
+        h2 Other: 
+          input(type="text", name="clinicalComment")
+      div.BannerBlue
+
+
+
+
+
+
+
+
+
