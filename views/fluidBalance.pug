@@ -33,4 +33,70 @@ block layout-content
       
       div.BannerBlue Fluid Balance
       div.PageContent
-        h3 hello
+        h3 Fluid Inputs
+        div.Whitespace hello   
+        select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+          option(value='0') -- Select --
+          option(value='1') Oral Intake
+          option(value='2') Jejunal Feed
+          option(value='3') Naso-gastric Feed
+          option(value='4') PEG Feed
+          option(value='5') Intravenous 1
+        script.
+              function myclick(){ 
+              var t=$("#myselect").val().toString();
+              $("#zaftot").val(t);
+              $("#zaftot").focus();
+              $("#myselect").hide();
+            };
+        div.Whitespace hello
+        input(type='text', placeholder='Vol(ml)' name='input')
+        div.Whitespace 
+        div.Buttons
+          a()
+            div.Button Add Input
+        div.Whitespace hello 
+        input(type='text', placeholder='Table with Time, Source and Volume' name='input')
+      div.BannerBlue 
+      div.PageContent
+        h3 Fluid Outputs
+        div.Whitespace hello   
+        select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+          option(value='0') -- Select --
+          option(value='1') Urine
+          option(value='2') Faeces
+          option(value='3') Gastric
+          option(value='4') Drain
+        script.
+              function myclick(){ 
+              var t=$("#myselect").val().toString();
+              $("#zaftot").val(t);
+              $("#zaftot").focus();
+              $("#myselect").hide();
+            };
+        div.Whitespace hello
+        input(type='text', placeholder='Vol(ml)' name='output')
+        div.Whitespace 
+        div.Buttons
+          a()
+            div.Button Add Output
+        div.Whitespace hello
+        input(type='text', placeholder='Table with Time, Source and Volume' name='input')
+        
+      div.BannerBlue  
+      div.PageContent
+        h3 Current Balances
+        div.Whitespace hello   
+        div.Buttons
+          a()
+            div.Button Calculate Balance
+        div.Whitespace hello
+        h2 Input (ml): 
+          input(type='text', placeholder='Input' name='input')
+        div.Whitespace hello
+        h2 Urinary Output (ml):  
+          input(type='text', placeholder='Output Balance' name='input')
+        div.Whitespace hello
+        h2 Current Balance (ml):  
+          input(type='text', placeholder='Input - Output Balance' name='input')
+      div.BannerBlue  
