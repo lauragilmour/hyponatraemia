@@ -33,4 +33,117 @@ block layout-content
       
       div.BannerBlue Fluid Choice
       div.PageContent
-        h3 hello
+        h3 Current Serum Electrolyte Values
+        div.Whitespace .
+        h2 Has a sample been obtained for serum electrolyte measurement?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Yes
+            option(value='2') No
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace .
+        h2 Are the electrolytes available?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Yes
+            option(value='2') No
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace .
+        h2 What range is the serum sodium in?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Low
+            option(value='2') Normal
+            option(value='3') High
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace .
+        h2 What range is the serum potassium in?
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') Low
+            option(value='2') Normal
+            option(value='3') High
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+      .BannerBlue 
+      div.PageContent  
+        h3 Fluid Choice
+        div.Whitespace hello
+        h2 0.9% Recommended. Add comment if other is selected to back up decision.
+        div.Whitespace hello
+        h2 IV Fluid Type
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') 0.9% NaCl
+            option(value='2') 0.9% NaCl + 5% Gluc
+            option(value='3') 0.9% NaCl + 5% Gluc + 10mmol KCl
+            option(value='4') 0.9% NaCl + 5% Gluc + 20mmol KCl
+            option(value='5') 0.9% NaCl + 10mmol KCl
+            option(value='6') 0.9% NaCl + 20mmol KCl
+            option(value='7') 0.45% NaCl
+            option(value='8') 0.45% NaCl + 2.5% Gluc
+            option(value='9') 0.45% NaCl + 5% Gluc
+            option(value='10') 0.45% NaCl + 5% Gluc + 10mmol KCl
+            option(value='11') 0.45% NaCl + 5% Gluc + 20mmol KCl
+            option(value='12') Hartmann's solution
+            option(value='13') Hartmann's solution + 3% Gluc
+            option(value='14') Glucose 5% + 10mmol KCl
+            option(value='15') Glucose 5% + 20mmol KCl
+            option(value='16') Glucose 5%
+            option(value='17') Glucose 10%
+            option(value='18') Metronidazole 500mg
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace hello
+        h2 IV Fluid Volume
+          select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
+            option(value='0') -- Select --
+            option(value='1') 100ml
+            option(value='2') 250ml
+            option(value='3') 500ml
+            option(value='4') 1000ml
+
+          script.
+                function myclick(){ 
+                var t=$("#myselect").val().toString();
+                $("#zaftot").val(t);
+                $("#zaftot").focus();
+                $("#myselect").hide();
+              };
+        div.Whitespace hello
+        h2 Comment: 
+          input(type='text', placeholder='' name='comment')
+      .BannerBlue
