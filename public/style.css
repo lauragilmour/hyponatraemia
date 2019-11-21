@@ -289,7 +289,8 @@ a {
   border-bottom: var(--ui-shawdow-border);
   box-shadow: var(--ui-shawdow);
 }
-/* .WelcomeView {
-    background: #4197fa;
-    background-size: cover;
-} */
+
+.vipPic {
+  background: url("vipScore.jpg") left bottom;
+  background-size: cover;
+}
