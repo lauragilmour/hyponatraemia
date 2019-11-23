@@ -7,10 +7,10 @@
   --header-font: "Raleway", sans-serif;
   --core-font: "Merriweather Sans", sans-serif;
 
-  --primary: #4197fa;
+  --primary: #7cbeeb;
   --secondary: #2a3747;
 
-  --highlight: #4197fa;
+  --highlight: #7cbeeb;
 
   --ui-shawdow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
     0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
@@ -27,7 +27,7 @@ body,
 #root {
   height: 0%;
   width: 100%;
-  background-color: #4197fa;
+  background-color: #7cbeeb;
 }
 
 body {
@@ -86,7 +86,7 @@ a {
   padding: 0px;
 
   background-size: cover;
-  background-color: #4197fa;
+  background-color: #7cbeeb;
 
   font-family: var(--core-font);
 }
@@ -102,7 +102,7 @@ a {
   border-radius: 5px;
   
   overflow: visible;
-  background: #4197fa;
+  background: #4890ee;
   padding: 15px;
 
   font-family: var(--logo-font);
@@ -121,7 +121,8 @@ a {
     border-radius: 5px;
     
     overflow: visible;
-    background: #4197fa;
+    background: #7cbeeb;
+    
     padding: 15px;
   
     font-family: var(--logo-font);
@@ -160,7 +161,7 @@ a {
     border-radius: 5px;
     
     overflow: visible;
-    background: #4197fa;
+    background: #7cbeeb;
     padding: 15px;
   
     font-family: var(--logo-font);
@@ -245,7 +246,7 @@ a {
   background: var(--highlight);
 
   border-radius: 30px;
-
+  background: #4890ee;
   font-size: 14px;
   font-weight: bold;
   color: white;
