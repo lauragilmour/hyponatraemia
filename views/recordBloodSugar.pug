@@ -4,14 +4,14 @@ block layout-content
   
     div.View.WelcomeView   
       h1.Banner Fluid Monitoring Tool
-        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}
+        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}. Staff Id - #{name}
       h1.BannerWhite 
         div.NavButtons 
-          a(href="/")
-            div.NavButton Home
+          a(href="/index")
+            div.NavButton Patient Details
           div.NavButtons 
             a(href="/childOrNeonate")
-              div.NavButton Child or Neonate
+              div.NavButton Confirm Age
             div.NavButtons 
               a(href="/fluidCalculator")
                 div.NavButton Fluid Calculator 
@@ -29,7 +29,10 @@ block layout-content
                         div.NavButton Other Assessments
                       div.NavButtons 
                         a(href="/recordBloodSugar")
-                          div.NavButton Record Blood Sugar      
+                          div.NavButtonSelect Record Blood Sugar                                 
+                        div.NavButtons 
+                          a(href="/")
+                            div.NavButton Login       
       
       div.BannerBlue Record Blood Sugar
       div.PageContent
@@ -41,14 +44,14 @@ block layout-content
         h2 Clinical Comment: 
           select(name='dropdown' id="myselect" size="1" ,onClick="myclick()",style="margin-left:40px" )
             option(value='0') -- Select --
-            option(value='1') Result Recorded 
+            option(value='1') Normal Result -: No action taken  
             option(value='2') Low Sugar -: Extra feed given
-            option(value='3') Low Sugar -: IVbous and infusion increased
+            option(value='3') Low Sugar -: IVbolus and infusion increased
             option(value='4') Low Sugar -: Hypopack taken
             option(value='5') High Sugar -: Insulin given
             option(value='6') High Sugar -: Insulin commenced 
             option(value='7') High Sugar -: Urine check
-            option(value='8') High Sugar -:Insulin infusion increased
+            option(value='8') High Sugar -: Insulin infusion increased
             option(value='9') Other (please state)
           script.
                 function myclick(){ 

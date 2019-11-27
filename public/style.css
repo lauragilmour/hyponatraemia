@@ -3,9 +3,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
 
 :root {
-  --logo-font: "Share Tech Mono", monospace;
-  --header-font: "Raleway", sans-serif;
-  --core-font: "Merriweather Sans", sans-serif;
+  --logo-font: "Arial", monospace;
+  --header-font: "Arial", sans-serif;
+  --core-font: "Arial", sans-serif;
 
   --primary: #7cbeeb;
   --secondary: #2a3747;
@@ -15,7 +15,7 @@
   --ui-shawdow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
     0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
   fill: rgba(0, 0, 0, 0.54);
-  --ui-shawdow-border: 1px solid rgba(0, 0, 0, 0.14);
+  --ui-shawdow-border: 5px solid rgba(0, 0, 0, 0.14);
 }
 
 * {
@@ -27,7 +27,7 @@ body,
 #root {
   height: 0%;
   width: 100%;
-  background-color: #7cbeeb;
+  background-color: #bbdcf1;
 }
 
 body {
@@ -45,7 +45,7 @@ h1,
 h2,
 h3 {
   font-family: var(--header-font);
-  text-transform: uppercase;
+  text-transform: none;
 
   padding: 0;
   margin: 0;
@@ -107,7 +107,6 @@ a {
 
   font-family: var(--logo-font);
   color: white;
-  border-bottom: var(--ui-shawdow-border);
   box-shadow: var(--ui-shawdow);
 }
 .BannerSmall {
@@ -128,7 +127,6 @@ a {
     font-family: var(--logo-font);
     color: white;
     font-size: 12pt;
-    border-bottom: var(--ui-shawdow-border);
     box-shadow: var(--ui-shawdow);
   }
 .BannerWhite {
@@ -161,19 +159,19 @@ a {
     border-radius: 5px;
     
     overflow: visible;
-    background: #7cbeeb;
+    background: #bbdcf1;
     padding: 15px;
   
     font-family: var(--logo-font);
-    color: white;
+    color: black;
     font-size: 12pt;
   }
   .PageContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
     align-self: center;
     width:90%;
     
@@ -241,7 +239,7 @@ a {
   justify-content: overflow-position;
   overflow: visible;
   height: 55px;
-  width: 150px;
+  width: 136px;
   
   background: var(--highlight);
 
@@ -257,21 +255,43 @@ a {
   box-shadow: var(--ui-shawdow);
 }
 
+.NavButtonSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: overflow-position;
+  overflow: visible;
+  height: 55px;
+  width: 136px;
+  
+  background: var(--highlight);
+
+  border-radius: 30px;
+  background: #7cbeeb;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+
+  text-transform: capitalize;
+
+  border-bottom: var(--ui-shawdow-border);
+  box-shadow: var(--ui-shawdow);
+}
+
 .Buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: normal;
   overflow: visible;
-  align-items: center;
+  align-items: normal;
   width: 90%;
-  align-items: center;
   padding: 1px;
 }
 
 .Button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   justify-content: overflow-position;
   overflow: visible;
   height: 20px;
@@ -292,6 +312,37 @@ a {
 }
 
 .vipPic {
-  background: url("vipScore.jpg") left bottom;
-  background-size: cover;
+  background: url("vipScore.jpg");
+  height: 100px;
+  width: 50px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

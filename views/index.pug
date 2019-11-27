@@ -1,17 +1,19 @@
 extends layout.pug
 
+
+
 block layout-content
-  
+
     div.View.WelcomeView   
       h1.Banner Fluid Monitoring Tool
-        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}
+        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}. Staff Id - #{name}
       h1.BannerWhite 
         div.NavButtons 
-          a(href="/")
-            div.NavButton Home
+          a(href="/index")
+            div.NavButtonSelect Patient Details
           div.NavButtons 
             a(href="/childOrNeonate")
-              div.NavButton Child or Neonate
+              div.NavButton Confirm Age
             div.NavButtons 
               a(href="/fluidCalculator")
                 div.NavButton Fluid Calculator 
@@ -29,18 +31,24 @@ block layout-content
                         div.NavButton Other Assessments
                       div.NavButtons 
                         a(href="/recordBloodSugar")
-                          div.NavButton Record Blood Sugar      
+                          div.NavButton Record Blood Sugar                                
+                        div.NavButtons 
+                          a(href="/")
+                            div.NavButton Login       
       div.BannerBlue Home
       div.PageContent
+        div(class="form-signin")
+          h3 Welcome #{name}!
+          h3 Welcome #{username}
         h3 .
           h3 Patient H&SC Number: 
-            h3 {hscNumber}
+            h3 !{data.hscNumber}
               h3 .
                 h3 Patient Name:
-                  h3 {name}
+                  h3 !{data.name}
                     h3 .
                       h3 Patient DOB
-                        h3 {dob}
+                        h3 !{data.dob}
                           h3 .
-
+      div.BannerBlue
       

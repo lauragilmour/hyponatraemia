@@ -1,0 +1,44 @@
+[
+    {
+        "hscNumber": "*******", 
+        "name": "*******",
+        "dob": "*******",
+        
+        "age": "",
+
+        "weight": [],
+        "measurement": [],
+        "ueAvailable": [],
+        "reasonIvFluids": [],
+        "commentIv": [],
+
+        "dehydration": [],
+        "fluidBolus": [],
+        "amount": [],
+        "commentAmount": [],
+        "percentageDehydration": [],
+        "24hrPeriod": [],
+        "48hrPeriod": [],
+
+        "sampleObtained": [],
+        "electrolytesAvailable": [],
+        "serumSodiumRange": [],
+        "serumPotasiumRange": [],
+        "ivFluidType": [],
+        "ivFluidVoulume": [],
+        "ivFluidVoulumeComment": [],
+
+        "fluidInput": [],
+        "volInput": [],
+        "fluidOutput": [],
+        "volOutput": [],
+        "currentBalance": [],
+        "urinaryOutput": [],
+
+        "vipScore": [],
+
+        "bloodSugarLevel": [],
+        "clinicalComment": [],
+        "comment": []
+    }
+]

@@ -4,14 +4,14 @@ block layout-content
   
     div.View.WelcomeView   
       h1.Banner Fluid Monitoring Tool
-        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}
+        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}. Staff Id - #{name}
       h1.BannerWhite 
         div.NavButtons 
-          a(href="/")
-            div.NavButton Home
+          a(href="/index")
+            div.NavButton Patient Details
           div.NavButtons 
             a(href="/childOrNeonate")
-              div.NavButton Child or Neonate
+              div.NavButton Confirm Age
             div.NavButtons 
               a(href="/fluidCalculator")
                 div.NavButton Fluid Calculator 
@@ -26,10 +26,13 @@ block layout-content
                       div.NavButton 24Hr Fluid Review
                     div.NavButtons 
                       a(href="/otherAssessments")
-                        div.NavButton Other Assessments
+                        div.NavButtonSelect Other Assessments
                       div.NavButtons 
                         a(href="/recordBloodSugar")
-                          div.NavButton Record Blood Sugar           
+                          div.NavButton Record Blood Sugar                                 
+                        div.NavButtons 
+                          a(href="/")
+                            div.NavButton Login            
       div.BannerBlue Other Assessments
       div.PageContent
         h3 Visual Infusion Phlebitis Score
@@ -50,3 +53,15 @@ block layout-content
             };
         img.image(src='/vipScore.jpg')
       div.BannerBlue
+
+
+//- mongoose.connect(process.env.DATABASE, { useMongoClient: true });
+//- mongoose.Promise = global.Promise;
+//- mongoose.connection
+//-   .on('connected', () => {
+//-     console.log(`Mongoose connection open on ${process.env.DATABASE}`);
+//-   })
+        // .on('error', (err) => {
+  //   console.log(`Connection error: ${err.message}`);
+  // });
+//require('dotenv').config();

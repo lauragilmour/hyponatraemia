@@ -4,14 +4,14 @@ block layout-content
   
     div.View.WelcomeView   
       h1.Banner Fluid Monitoring Tool
-        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}
+        h2.BannerSmall Patient H&SC Number - {db.patientHsc}. Patient Name - {db.patientName}. Patient DOB - {db.patientDob}. Staff Id - #{name}
       h1.BannerWhite 
         div.NavButtons 
-          a(href="/")
-            div.NavButton Home
+          a(href="/index")
+            div.NavButton Patient Details
           div.NavButtons 
             a(href="/childOrNeonate")
-              div.NavButton Child or Neonate
+              div.NavButtonSelect Confirm Age
             div.NavButtons 
               a(href="/fluidCalculator")
                 div.NavButton Fluid Calculator 
@@ -29,16 +29,18 @@ block layout-content
                         div.NavButton Other Assessments
                       div.NavButtons 
                         a(href="/recordBloodSugar")
-                          div.NavButton Record Blood Sugar      
+                          div.NavButton Record Blood Sugar                                 
+                        div.NavButtons 
+                          a(href="/")
+                            div.NavButton Login      
       
       div.BannerBlue Child or Neonate
       div.PageContent
         h3 Age
         div.Whitespace hello
         h2 Neonate (0-28 days)
-        div.Whitespace .
           input(type='radio', name='platform', id='neonate', value='psn')
         div.Whitespace hello
         h2 Child (4 weeks up till 16th birthday)
-        div.Whitespace .
           input(type='radio', name='platform', id='child', value='psn')
+            
